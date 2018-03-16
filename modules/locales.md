@@ -14,7 +14,7 @@ configuration file for the module locales.js: data/config/modules/locales.json
     "default": "ru_ru",       // default locale.
     "colors":{
         "event": "brightgreen", // the color of messages sent by the event function
-        "warn":  "darkgreen",   // the color of messages sent by the warn function
+        "echo":  "darkgreen",   // the color of messages sent by the warn function
         "warn":  "red",         // the color of messages sent by the warn function
         "help":  "aqua"         // the color of messages sent by the help function
     }
@@ -23,33 +23,35 @@ configuration file for the module locales.js: data/config/modules/locales.json
 
 
 file with messages in English: data/locales/plugin/test/en_us.json
+```json
 {
-	"msg":{
-		"test1": "test1 message",
-		"test2": "test3 message",
-	},
-	"help" [
-		"help1 message",
-		"help2 message"
-	],
-	"test": "test message ${key1} ${key2}"
+    "msg":{
+        "test1": "test1 message",
+        "test2": "test3 message",
+    },
+    "help" [
+        "help1 message",
+        "help2 message"
+    ],
+    "test": "test message ${key1} ${key2}"
 }
-
+```
 file with messages in Russian: data/locales/plugins/test/ru_ru.json
+```json
 {
-	"msg":{
-		"test1": "тест1 сообщение",
-		"test2": "тест2 сообщение",
-	},
-	"help" [
-		"хелп1 сообщение",
-		"хелп2 сообщение"
-	],
-	"test": "тест сообщение ${key1} ${key2}"
+    "msg":{
+        "test1": "тест1 сообщение",
+        "test2": "тест2 сообщение",
+    },
+    "help" [
+        "хелп1 сообщение",
+        "хелп2 сообщение"
+    ],
+    "test": "тест сообщение ${key1} ${key2}"
 }
-
+```
 example of a plugin using locales.js: plugins/test.js
- 
+```js
 // connect the module
 var  locales = require('last/locales');
 // load the locale. The first parameter is the path, the second is the module name, the third is the default language of the plug-in
@@ -83,3 +85,4 @@ locale.warn(player,"aaa ${help.0} bbb ${msg.test1} ccc ${test} ddd",{"key1": 111
 // if there is no localization file for the player's language, the messages will be displayed in the language specified when calling locales.init(...)
 // locale.warn(...), locale.help(...), locale.echo(...) and locale.event(...) differ only in text messages, otherwise their functionality is identical.
 // more details on the capabilities of the module, you can read the description of its functions.
+```
