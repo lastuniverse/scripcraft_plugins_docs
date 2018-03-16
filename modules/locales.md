@@ -7,16 +7,20 @@ This module contains the basic functions of downloading localizations and sendin
 @module modules/last/locales
 @example
 configuration file for the module locales.js: data/config/modules/locales.json
+
+```js
 {
 	"enable": true,
-    "default": "ru_ru", // default locale.
+    "default": "ru_ru",      // default locale.
     "colors":{
-    	"event":"brightgreen",	// the color of messages sent by the event function
-    	"warn":"darkgreen",		// the color of messages sent by the warn function
-    	"warn":"red",			// the color of messages sent by the warn function
-    	"help":"aqua"			// the color of messages sent by the help function
+    	"event":"brightgreen",  // the color of messages sent by the event function
+    	"warn":"darkgreen",     // the color of messages sent by the warn function
+    	"warn":"red",           // the color of messages sent by the warn function
+    	"help":"aqua"           // the color of messages sent by the help function
     }
 }
+```
+
 
 file with messages in English: data/locales/plugin/test/en_us.json
 {
