@@ -10,13 +10,13 @@ configuration file for the module locales.js: data/config/modules/locales.json
 
 ```json
 {
-	"enable": true,
-    "default": "ru_ru",      // default locale.
+    "enable": true,
+    "default": "ru_ru",       // default locale.
     "colors":{
-    	"event": "brightgreen", // the color of messages sent by the event function
-    	"warn":  "darkgreen",   // the color of messages sent by the warn function
-    	"warn":  "red",         // the color of messages sent by the warn function
-    	"help":  "aqua"         // the color of messages sent by the help function
+        "event": "brightgreen", // the color of messages sent by the event function
+        "warn":  "darkgreen",   // the color of messages sent by the warn function
+        "warn":  "red",         // the color of messages sent by the warn function
+        "help":  "aqua"         // the color of messages sent by the help function
     }
 }
 ```
