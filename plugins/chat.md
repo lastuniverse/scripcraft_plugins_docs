@@ -19,7 +19,7 @@
 - `@` - Администраторский чат. Сообщения принимаются и отсылаются только членам административных групп.
 - `$` - Торговый чат. Сообщения принимаются и отсылаются всем игрокам на сервере. За сообщения взымается плата в размере указанном в файле настроек `trade.cost`.
 - Другие чаты, добавляемые плагинами, такие как:
-  - `#` - party - чат для [Пати](plugins/party). Сообщения в этом чате видят только члены пати
+  - `#` - party - чат для [Пати](/plugins/party). Сообщения в этом чате видят только члены пати
   - `%` - guild - Гильдейские чаты (плагин гильдий не реализован)
   - `*` - clan - Клановые чаты (плагин кланов не реализован)
 
@@ -84,7 +84,7 @@
 }
 ```
 
-## Настройки модуля [modules/last/permissions](modules/permissions)
+## Настройки модуля [modules/last/permissions](/modules/permissions)
 
 **Права доступа:** *могут быть выставленны персонально для разных групп и отдельных пользователей*
 ```js
@@ -112,7 +112,7 @@
 ...
 ```
 
-## Файлы локализации (поддерживаются модулем [modules/last/localses](modiles/locales) )
+## Файлы локализации (поддерживаются модулем [modules/last/localses](/modiles/locales) )
 
 Файлы локализации плагина находятся в папке `scriptcraft/data/locales/plugins/last/last_chat`. Вы можете создавать свои собственные файлы с локализациями под разные языки, и менять локализованные сообщения в уже существующих файлах.
 
@@ -163,13 +163,13 @@
 
 ## зависимости:
 > - utils - стандартный модуль ScriptCraft
-> - [modules/last/color](modules/color)       - модуль цвета
-> - [modules/last/users](modules/users)       - модуль доступа к персональному хранилищу данных пользователей
-> - [modules/last/economy](modules/economy)     - модуль управления экономикой и финансами игрока
-> - [modules/last/eventex](modules/eventex)     - экземпляр класса EventEmmiter созданный для межмодульного взаимодействия через вызовы событий
-> - [modules/last/locales](modules/locales)     - модуль локализации
-> - [modules/last/completer](modules/completer)   - модуль регистрации команд /jsp commandname как глобальных команд /commandname с возможностью автодополнения
-> - [modules/last/permissions](modules/permissions) - модуль управления правами доступа к функционалц прагинов для пользователей и групп пользователей
-> - [modules/last/timetools](modules/timetools)   - библиотека функций для работы со временем
+> - [modules/last/color](/modules/color)       - модуль цвета
+> - [modules/last/users](/modules/users)       - модуль доступа к персональному хранилищу данных пользователей
+> - [modules/last/economy](/modules/economy)     - модуль управления экономикой и финансами игрока
+> - [modules/last/eventex](/modules/eventex)     - экземпляр класса EventEmmiter созданный для межмодульного взаимодействия через вызовы событий
+> - [modules/last/locales](/modules/locales)     - модуль локализации
+> - [modules/last/completer](/modules/completer)   - модуль регистрации команд /jsp commandname как глобальных команд /commandname с возможностью автодополнения
+> - [modules/last/permissions](/modules/permissions) - модуль управления правами доступа к функционалц прагинов для пользователей и групп пользователей
+> - [modules/last/timetools](/modules/timetools)   - библиотека функций для работы со временем
 
 @module last/last_chat
