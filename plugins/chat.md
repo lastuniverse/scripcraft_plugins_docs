@@ -84,7 +84,7 @@
 ```js
 ...
 "permissions": {
-    "last_chat.admin": false,         // разрешение на использование таких команд как /mute и /unmute
+    "last_chat.admin":     false,     // разрешение на использование таких команд как /mute и /unmute
     "last_chat.trade.set": false      // разрешение на размещение рекламы в торговом чате с помощью команды `/trade set ...`
 }
 ...
