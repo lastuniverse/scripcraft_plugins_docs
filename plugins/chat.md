@@ -121,4 +121,5 @@
 > - modules/last/completer   - модуль регистрации команд /jsp commandname как глобальных команд /commandname с возможностью автодополнения
 > - modules/last/permissions - модуль управления правами доступа к функционалц прагинов для пользователей и групп пользователей
 > - modules/last/timetools   - библиотека функций для работы со временем
+
 @module last/last_chat
