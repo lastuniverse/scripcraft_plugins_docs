@@ -80,21 +80,30 @@
 
 ## Настройки модуля modules/last/permissions
 
-**Права доступа:**
-- `last_chat.admin` : разрешение на использование таких команд как /mute и /unmute
-- `last_chat.trade.set`: разрешение на размещение рекламы в торговом чате с помощью команды `/trade set ...`
+**Права доступа:** *могут быть выставленны персонально для разных групп и отдельных пользователей*
+```js
+...
+"permissions": {
+    "last_chat.admin": false,         // разрешение на использование таких команд как /mute и /unmute
+    "last_chat.trade.set": false      // разрешение на размещение рекламы в торговом чате с помощью команды `/trade set ...`
+}
+...
+```
 
 **Параметры:** *могут быть выставленны персонально для разных групп и отдельных пользователей*
 ```js
+...
 "options": {
     "last_chat.mute.maxtime": 60,     // максимальное время в минутах на которое можно лишить игрока право писать в чат.
     "last_chat.group": {              // Настройка иконки для группы. Включает подпункты:
         "icon":  "Ⓐ",                 // Иконка для группы.
-        "color": "gold"               // Цвет иконки. Может принимать следующие значения:  black, blue, darkgreen, darkaqua, darkred, purple, gold, gray, darkgray, indigo, brightgreen, aqua, red, pink, yellow, white
+        "color": "gold"               // Цвет иконки. Может принимать следующие значения:  
+                                      // black, blue, darkgreen, darkaqua, darkred, purple, gold, gray, darkgray, indigo, brightgreen, aqua, red, pink, yellow, white
     },
     "last_chat.trade.min":  30,       // Минимальное время повторения рекламного сообщения в минутах.
     "last_chat.trade.cost": 3000      // Стоимость 1 рекламного сообщения повторяющегося через промежутки времени равные last_chat.trade.min.
 }
+...
 ```
 
 ## Важно
