@@ -26,8 +26,9 @@
 > - [modules/last/permissions](/modules/permissions) - модуль управления правами доступа к функционалц прагинов для пользователей и групп пользователей
 
 
-## Пример использования:
+## Примеры использования:
 
+**простой пример**
 ```javascript
 //   подключаем модуль регистрации и автодополнения команд
 var  completer = require('last/completer');
@@ -42,7 +43,9 @@ var  command_data = command.addComplete('data');
 //   регистрируем команду {/youcomand data set <username> <number> } и ее обрабочтик как команду для чата клиента
      command_data.addComplete('get').addComplete('@user').addComplete('@re/\d+/',function (...){...});
 // теперь команда /youcomand со всеми ее параметрами будет доступна как глобальная, и будет автодополнятся по нажатию TAB
-
+```
+**пример демонстрирующий весь спектр возможностей**
+```javascript
 // В данном примере будет рассммотрено как зарегестрировать команды:
 // /description help
 // /description set {username} {you description}
