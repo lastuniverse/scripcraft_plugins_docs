@@ -84,4 +84,5 @@
 ```
 
 ## зависимости:
-     utils - стандартный модуль ScriptCraft
+ 
+ - utils - стандартный модуль ScriptCraft
