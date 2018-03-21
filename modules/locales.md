@@ -29,7 +29,7 @@ file with messages in English: data/locales/plugin/test/en_us.json
         "test1": "test1 message",
         "test2": "test3 message",
     },
-    "help" [
+    "help": [
         "help1 message",
         "help2 message"
     ],
@@ -43,7 +43,7 @@ file with messages in Russian: data/locales/plugins/test/ru_ru.json
         "test1": "тест1 сообщение",
         "test2": "тест2 сообщение",
     },
-    "help" [
+    "help": [
         "хелп1 сообщение",
         "хелп2 сообщение"
     ],
