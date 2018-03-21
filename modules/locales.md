@@ -8,7 +8,7 @@ This module contains the basic functions of downloading localizations and sendin
 @example
 configuration file for the module locales.js: data/config/modules/locales.json
 
-```json
+```javascript
 {
     "enable": true,
     "default": "ru_ru",       // default locale.
@@ -51,7 +51,7 @@ file with messages in Russian: data/locales/plugins/test/ru_ru.json
 }
 ```
 example of a plugin using locales.js: plugins/test.js
-```js
+```javascript
 // connect the module
 var  locales = require('last/locales');
 // load the locale. The first parameter is the path, the second is the module name, the third is the default language of the plug-in
