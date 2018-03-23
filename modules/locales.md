@@ -2,11 +2,10 @@
 <!-- SUBTITLE:модуль поддержки локализации плагинов -->
 
 # `locales` - модуль поддержки локализации плагинов
-### Interface for working with locales
+## Interface for working with locales
 This module contains the basic functions of downloading localizations and sending localized messages to users
-@module modules/last/locales
-@example
-configuration file for the module locales.js: data/config/modules/locales.json
+
+## configuration file for the module locales.js: `data/config/modules/locales.json`
 
 ```javascript
 {
@@ -21,8 +20,7 @@ configuration file for the module locales.js: data/config/modules/locales.json
 }
 ```
 
-
-file with messages in English: data/locales/plugin/test/en_us.json
+## file with messages in English: `data/locales/plugin/test/en_us.json`
 ```json
 {
     "msg":{
@@ -36,7 +34,8 @@ file with messages in English: data/locales/plugin/test/en_us.json
     "test": "test message ${key1} ${key2}"
 }
 ```
-file with messages in Russian: data/locales/plugins/test/ru_ru.json
+
+## file with messages in Russian: `data/locales/plugins/test/ru_ru.json`
 ```json
 {
     "msg":{
@@ -50,7 +49,8 @@ file with messages in Russian: data/locales/plugins/test/ru_ru.json
     "test": "тест сообщение ${key1} ${key2}"
 }
 ```
-example of a plugin using locales.js: plugins/test.js
+
+## example of a plugin using locales.js: plugins/test.js
 ```javascript
 // connect the module
 var  locales = require('last/locales');
