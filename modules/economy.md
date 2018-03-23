@@ -10,7 +10,7 @@
 
 ## Файлы конфигурации
 
-***data/config/modules/last/economy.json***
+### data/config/modules/last/economy.json
 ```javascript
 {
     "locale": "ru_ru",   // локаль по умолчанию
