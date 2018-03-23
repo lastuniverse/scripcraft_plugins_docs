@@ -100,7 +100,151 @@
  * @param {string}         `groupName` строка, содержащая название проверяемой группы
  * @return {boolean}      возвращает `true` если указанный пользователь является членом группы `groupName`, иначе возвращает `false`
  
- ## Примеры использования:
+ ## Пример использования:
+В этом примере будет создана простая команда /mobspawn {mobType},  которая будет выполнятся только в том случае, если у пользователя  прпописанно разрешение на ее выполнение `mobspawn.use`. при этом, если в настройках параметр `mobspawn.types` будет сожержать массив с разрешенными к спавну типами мобов. Для работы данного примера, для пользователя должны быть прописанны соответствующие групповые и/или персональные настройки в файлах конфигурации групп и/или пользователей модуля permissions.
+
+***пример файла групповых настроек `minecraft_server_folder/scriptcraft/data/config/modules/last/permissions/groups.json`***
+```javascript
+{
+    "guests": {             // группа гостей, им будет недоступна команда /mobspawn
+        "isEnable": true,         // группа включена
+        "default": true,          // группа по умолчанию
+        "priotity": 10,           // приоритет группы
+        "permissions": {          // разрешения группы
+        },
+        "options": {              // параметры группы
+        }
+    },
+    "players": {            // описание группы игроков, для спавна им будут доступны только свиньи и кролики
+        "isEnable": true,         // группа включена
+        "default": false,
+        "priotity": 20,           // приоритет группы
+        "permissions": {          // разрешения группы
+            "mobspawn.use": true         
+        },
+        "options": {              // параметры группы
+            "mobspawn.types": {"PIG": true, "RABBIT": true }
+        }
+    },
+    "administrators": {     // описание группы администраторов, для спавна им будут доступны свиньи и кролики и зомби
+        "isEnable": true,         // группа включена
+        "default": false,
+        "priotity": 999,          // приоритет группы
+        "permissions": {          // разрешения группы
+            "mobspawn.use": true
+        },
+        "options": {              // параметры группы
+            "mobspawn.types": {"PIG": true, "RABBIT": true, "ZOMBIE": true }
+        }
+    }
+}
+```
+
+***пример файла персональных настроек `minecraft_server_folder/scriptcraft/data/config/modules/last/permissions/users.json`***
+```javascript
+{
+...
+    "2f8a6ef2-e971-4b9a-90b9-f54db65dc4b7":{
+				// этот игрок "masha" не будет иметь доступа к команде /mobspawn
+        "name": "masha",
+        "groups": {
+        },
+        "permissions":{
+        },
+        "options": {
+        }
+    },
+    "34a8b6f2-6e64-b9a2-0ad7-c58ac5db6347":{
+				// этот игрок "petya" будет иметь доступ к команде /mobspawn с правами группы players
+        "name": "petya",
+        "groups": {
+            "players": true
+        },
+        "permissions":{
+        },
+        "options": {
+        }
+    },
+    "58ac5db-24e6-b90a-d7a2-c634734a8b6f2":{
+				// этот игрок "vasya" будет иметь доступ к команде /mobspawn с правами группы administrators
+        "name": "vasya",
+        "groups": {
+            "administrators": true
+        },
+        "permissions":{
+        },
+        "options": {
+        }
+    },		
+    "cb6f25db-90a6-b24e-c638-d7a258a4734a":{
+				// этот игрок "kolya" будет иметь доступ к команде /mobspawn с индивидуальными настройками (сможет спавнить только летучих мышей)
+        "name": "kolya",
+        "groups": {
+            "guests": true
+        },
+        "permissions":{
+				    "mobspawn.use": true
+        },
+        "options": {
+				    "mobspawn.types": {"BAT": true }
+        }
+    },		
+...
+}
+```
+
+***ну и непосредственно сам плагин, реализующий команду***
+```javascript
+// подключаем модуль разрешений
+var permissions = require('last/permissions');
+
+// подключаем регистрации глобальных команд
+var completer = require('last/completer');
+
+// Регистрируем команду `/mobspawn {mobType}` (без обработчика), 
+// но с функцией, которая при вызове, будет возвращать список мобов, разрешенных для пользователя 
+completer.addPlayerCommand('hello',undefined,get_mob_list)
+                      .addComplete('@user',cmd_hello);
+
+// создаем функцию-обработчик команды `/mobspawn {mobType}`
+// в params[0] будет `{mobType}` введенное после /mobspawn
+function cmd_hello(params , sender){
+    
+		// получаем объект с опциями и разрешениями для пользователя который ввел команду
+		var permission = permissions.getUserPermissions(sender);
+    
+		// проверяем у него наличие разрешения mobspawn.use
+		if ( !permission.isPermission("mobspawn.use") )
+        return echo(sender, "У вас нет разрешения на использования команды /mobspawn {mobType}");
+		
+		// получаем введенный игроком тип моба
+		var mobType = params[0];
+		
+		// получаем список рпазрешенных к спавну мобов
+		var mobList = permission.getParam("mobspawn.types");
+		
+		// проверяем имеет ли игрок право спавнить этот тип мобов
+		if ( !mobList[mobType] )
+        return echo(sender, "У вас нет разрешения спавнить "+mobType);
+				
+		// Все проверки пройдены, далее код, спавнящий указанного моба
+		...
+		
+}
+
+
+// создаем функцию, получающую разрешенный для пользователя список мобов
+function get_mob_list( sender ) {
+
+		// получаем объект с опциями и разрешениями для пользователя который ввел команду
+		var permission = permissions.getUserPermissions(sender);
+
+		// получаем список рпазрешенных к спавну мобов
+		var mobList = permission.getParam("mobspawn.types");
+
+		return (typeof mobList === "object"?mobList:{});
+}
+```
 
 ## Зависимости:
  
