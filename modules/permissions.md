@@ -214,6 +214,7 @@ function cmd_hello(params , sender){
 		var permission = permissions.getUserPermissions(sender);
     
 		// проверяем у него наличие разрешения mobspawn.use
+		// игрок "masha" отвалится именно тут
 		if ( !permission.isPermission("mobspawn.use") )
         return echo(sender, "У вас нет разрешения на использования команды /mobspawn {mobType}");
 		
@@ -221,6 +222,9 @@ function cmd_hello(params , sender){
 		var mobType = params[0];
 		
 		// получаем список рпазрешенных к спавну мобов
+		// игрок "petya" получит: {"PIG": true, "RABBIT": true }
+		// игрок "vasya" получит: {"PIG": true, "RABBIT": true, "ZOMBIE": true }
+		// игрок "kolya" получит: {"BAT": true }
 		var mobList = permission.getParam("mobspawn.types");
 		
 		// проверяем имеет ли игрок право спавнить этот тип мобов
@@ -240,6 +244,9 @@ function get_mob_list( sender ) {
 		var permission = permissions.getUserPermissions(sender);
 
 		// получаем список рпазрешенных к спавну мобов
+		// игрок "petya" получит: {"PIG": true, "RABBIT": true }
+		// игрок "vasya" получит: {"PIG": true, "RABBIT": true, "ZOMBIE": true }
+		// игрок "kolya" получит: {"BAT": true }
 		var mobList = permission.getParam("mobspawn.types");
 
 		return (typeof mobList === "object"?mobList:{});
