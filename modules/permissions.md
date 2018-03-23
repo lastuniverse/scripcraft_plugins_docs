@@ -25,34 +25,34 @@
 **Пример:**
 ```javascript
 ...
-"guest": {							// описание группы "guest"
-	"isEnable": true,					// группа включена
-	"default": true, 					// группа по умолчанию
-	"priotity": 10,						// приоритет группы
-	"permissions": {					// разрешения группы
-		"last_warp.warp": false         
-	},
-	"options": {						// параметры группы
-		"last_warp.max":0,
-		"last_teleport.cost": 300
-	}
+"guest": {                          // описание группы "guest"
+    "isEnable": true,                   // группа включена
+    "default": true,                    // группа по умолчанию
+    "priotity": 10,                     // приоритет группы
+    "permissions": {                    // разрешения группы
+        "last_warp.warp": false         
+    },
+    "options": {                        // параметры группы
+        "last_warp.max":0,
+        "last_teleport.cost": 300
+    }
 },
-"player": {							// описание группы "player"
-	"isEnable": true,					// группа включена
-	"priotity": 20,						// приоритет группы
-	"permissions": {					// разрешения группы
-		"last_elitra.slap": false,  	// разрешение отключено, как если бы его вообще небыло
-		//"last_spawn.spawn": true,		// разрешение отключено, как если бы его вообще небыло
-		"last_spawn.sign.use": true,
-		"last_spawn.sign.place": true,
-		"last_warp.sign.use": true,
-		"last_warp.sign.place": true,
-		"last_warp.access": true,
-	},
-	"options": {						// параметры группы
-		"last_warp.max":0,
-		"last_teleport.cost": 300
-	}
+"player": {                         // описание группы "player"
+    "isEnable": true,                   // группа включена
+    "priotity": 20,                     // приоритет группы
+    "permissions": {                    // разрешения группы
+        "last_elitra.slap": false,      // разрешение отключено, как если бы его вообще небыло
+        //"last_spawn.spawn": true,     // разрешение отключено, как если бы его вообще небыло
+        "last_spawn.sign.use": true,
+        "last_spawn.sign.place": true,
+        "last_warp.sign.use": true,
+        "last_warp.sign.place": true,
+        "last_warp.access": true,
+    },
+    "options": {                        // параметры группы
+        "last_warp.max":0,
+        "last_teleport.cost": 300
+    }
 },
 ...
 ```
