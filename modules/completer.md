@@ -64,18 +64,30 @@
 
 **простой пример**
 ```javascript
+// В данном примере будет рассммотрено как зарегестрировать команды:
+// `/youcomand`
+// `/youcomand help`
+// `/youcomand data`
+// `/youcomand data get <username>`
+// `/youcomand data set <username> <number>`
+
 //   подключаем модуль регистрации и автодополнения команд
 var  completer = require('last/completer');
 //   регистрируем команду {/youcomand} и ee обрабочтик как команду для чата клиента
 var  command = completer.addPlayerCommand('youcomand',function (...){...});
+
 //   регистрируем команду {/youcomand help} и ее обрабочтик как команду для чата клиента
      command.addComplete('help',function (...){...});
+
 //   регистрируем команду {/youcomand data} без обработчика как команду для чата клиента
 var  command_data = command.addComplete('data');
+
 //   регистрируем команду {/youcomand data get <username> } и ее обрабочтик как команду для чата клиента
      command_data.addComplete('get').addComplete('@user',function (...){...});
+
 //   регистрируем команду {/youcomand data set <username> <number> } и ее обрабочтик как команду для чата клиента
-     command_data.addComplete('get').addComplete('@user').addComplete('@re/\d+/',function (...){...});
+     command_data.addComplete('set').addComplete('@user').addComplete('@re/\d+/',function (...){...});
+
 // теперь команда /youcomand со всеми ее параметрами будет доступна как глобальная, и будет автодополнятся по нажатию TAB
 ```
 **пример демонстрирующий весь спектр возможностей**
