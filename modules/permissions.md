@@ -11,7 +11,7 @@
 
 ## Файлы конфигурации:
 
-- - minecraft_server_folder/scriptcraft/data/config/modules/last/permissions/groups.json - настройки групп пользователей.
+- minecraft_server_folder/scriptcraft/data/config/modules/last/permissions/groups.json - настройки групп пользователей.
 - minecraft_server_folder/scriptcraft/data/config/modules/last/permissions/users.json - индивидуальные настройки пользователей.
 
 ## секции и параметры фала конфигурации групп:
