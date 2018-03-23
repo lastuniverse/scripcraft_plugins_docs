@@ -204,7 +204,7 @@ var completer = require('last/completer');
 // Регистрируем команду `/mobspawn {mobType}` (без обработчика), 
 // но с функцией, которая при вызове, будет возвращать список мобов, разрешенных для пользователя 
 completer.addPlayerCommand('hello',undefined,get_mob_list)
-          .addComplete('@user',cmd_hello);
+         .addComplete('@user',cmd_hello);
 
 // создаем функцию-обработчик команды `/mobspawn {mobType}`
 // в params[0] будет `{mobType}` введенное после /mobspawn
