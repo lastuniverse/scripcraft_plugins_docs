@@ -33,8 +33,8 @@
 		"last_warp.warp": false         
 	},
 	"options": {						// параметры группы
-		"last_warp.max":0,
- 		"last_teleport.cost": 300
+    "last_warp.max":0,
+    "last_teleport.cost": 300
 	}
 },
 "player": {							// описание группы "player"
