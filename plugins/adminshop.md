@@ -1,6 +1,8 @@
 <!-- TITLE: аdminshop -->
 <!-- SUBTITLE: описание плагина `adminshop` -->
 
+[video](https://gaming.youtube.com/watch?v=5QNoNvySoFk&feature=share){.youtube}
+
 # Плагин админских бездонных магазинов
 Плагин позволяет создавать бездонные магазины (без сундука).
 По сути, магазин это табличка на которой указаны:
