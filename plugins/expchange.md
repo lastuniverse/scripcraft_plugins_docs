@@ -35,7 +35,7 @@
 "permissions": {
     "last_expchange.use":     false,     // разрешение на использование таких команд как /exp reset
     "last_expchange.admin":   false,     // разрешение на использование таких команд как /exp give
-    "last_expchange.set":   false      // разрешение на установку магазинов опыта с помощью команды `/exp set ...`
+    "last_expchange.set":     false      // разрешение на установку магазинов опыта с помощью команды `/exp set ...`
 }
 ...
 ```
