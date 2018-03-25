@@ -3,6 +3,9 @@
 
 # Плагин экономики.
 
+[video](https://gaming.youtube.com/watch?v=dWvjQydBP1I&feature=share){.youtube}
+
+
 ## Возможности:
 - ввод в игру игровой валюты
 - проведение финансовых операций между игроками
