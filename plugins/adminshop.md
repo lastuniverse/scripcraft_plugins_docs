@@ -33,7 +33,7 @@
  - `buy` и `sell` - цены покупки и продажы в процентах от базовой цены, указанные в секции `price` файла конфигурации.
      
 ## Удаление магазинов
-Для удаления такого магазина просто сбейте табличку топором или блок на который установленна табличка.
+Для удаления такого магазина просто сбейте табличку топором или сломайте блок на который установленна табличка.
 После перезагрузки сервера магазин будет удален также и из базы.
 
 ## Использование магазинов
@@ -72,7 +72,7 @@
 ...
 ```
 
-## Файлы локализации (поддерживаются модулем [modules/last/localses](/modiles/locales) )
+## Файлы локализации (поддерживаются модулем [modules/last/localses](/modules/locales) )
 
 Файлы локализации плагина находятся в папке `scriptcraft/data/locales/plugins/last/last_chat`. Вы можете создавать свои собственные файлы с локализациями под разные языки, и менять локализованные сообщения в уже существующих файлах.
 
@@ -121,12 +121,12 @@
  - возможно другие блоки и предметы содержащие особы свойства
  
 ## Зависимости:
- - utils - стандартный модуль ScriptCraft
- - [modules/last/eventex](/modules/eventex)     - экземпляр класса EventEmmiter созданный для межмодульного взаимодействия через вызовы событий
- - [modules/last/completer](/modules/completer)   - модуль регистрации команд /jsp commandname как глобальных команд /commandname с возможностью автодополнения
- - [modules/last/economy](/modules/economy)     - модуль экономики
- - [modules/last/signs](/modules/signs)       - модуль событий связанных с табличками
- - [modules/last/users](/modules/users)       - модуль для централизованного хранения данных пользователя с кэшированием для более быстрого доступа
- - [modules/last/timetools](/modules/timetools)   - модуль для работы со таймером
- - [modules/last/locales](/modules/locales)     - модуль локализации
- - [modules/last/inventory](/modules/last/inventory)   - модуль работы с инвентарем и материалами
+ > - utils - стандартный модуль ScriptCraft
+ > - [modules/last/eventex](/modules/eventex)     - экземпляр класса EventEmmiter созданный для межмодульного взаимодействия через вызовы событий
+ > - [modules/last/completer](/modules/completer)   - модуль регистрации команд /jsp commandname как глобальных команд /commandname с возможностью автодополнения
+ > - [modules/last/economy](/modules/economy)     - модуль экономики
+ > - [modules/last/signs](/modules/signs)       - модуль событий связанных с табличками
+ > - [modules/last/users](/modules/users)       - модуль для централизованного хранения данных пользователя с кэшированием для более быстрого доступа
+ > - [modules/last/timetools](/modules/timetools)   - модуль для работы со таймером
+ > - [modules/last/locales](/modules/locales)     - модуль локализации
+ > - [modules/last/inventory](/modules/last/inventory)   - модуль работы с инвентарем и материалами
