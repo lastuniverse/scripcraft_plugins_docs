@@ -1,6 +1,11 @@
 <!-- TITLE: lift -->
 <!-- SUBTITLE: описание плагина `lift` -->
 
+[video](https://gaming.youtube.com/watch?v=mAZfvIA0CAw&feature=share){.youtube}
+
+![2018 03 25 21 24 03](/uploads/plugins-lift/2018-03-25-21-24-03.png "2018 03 25 21 24 03")
+![2018 03 25 21 24 49](/uploads/plugins-lift/2018-03-25-21-24-49.png "2018 03 25 21 24 49")
+![2018 03 25 21 25 06](/uploads/plugins-lift/2018-03-25-21-25-06.png "2018 03 25 21 25 06")
 # Плагин табличек-лифтов
 
 ## Возможности:
