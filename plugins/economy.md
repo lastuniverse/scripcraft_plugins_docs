@@ -17,7 +17,7 @@
 - `/economy pay {playername} {money}` : перечислить другому игроку определенную сумму. Минимальная сума : 1. Дробные суммы округляются до целых в сторону уменьшения
 - `/economy give {playername} {money}` : подарить от имени сервера другому игроку определенную сумму. Минимальная сума : 1. Дробные суммы округляются до целых в сторону уменьшения
 - `/money` : алиас для команды ***/economy money***
-- `/money {playername}` : алиас для команды ***/economy money {playername} ***
+- `/money {playername}` : алиас для команды ***/economy money {playername}***
 - `/pay {playername} {money}` : алиас для команды ***/economy pay {playername} {money}***
 - `/give {playername} {money}` : алиас для команды ***/economy give {playername} {money}***
 - `/top {page}` : выводит в чат список из 10 богатейших игроков сервера. Не обязательный параметр  ***{page}***  указывает номер страницы списка для прсмотра.
