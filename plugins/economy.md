@@ -70,7 +70,7 @@
         "/money : то же самое что и /economy money\n",
         "/money {playername}: то же самое что и /economy money {playername}\n",
         "/pay {playername} {money} : то же самое что и /economy pay {playername} {money}\n",
-        "/top {10|15|20} : то же самое что и /economy top {page}\n"    
+        "/top {page} : то же самое что и /economy top {page}\n"    
     ]
 }
 ```
